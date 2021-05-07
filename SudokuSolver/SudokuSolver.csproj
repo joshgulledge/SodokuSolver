@@ -8,5 +8,6 @@
   <ItemGroup>
     <Folder Include="Workers\" />
     <Folder Include="Data\" />
+    <Folder Include="Strategies\" />
   </ItemGroup>
 </Project>
