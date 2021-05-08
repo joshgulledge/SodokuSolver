@@ -25,7 +25,8 @@ namespace SudokuSolver.Strategies
             // list of all the strategies
             List<ISudokuStrategy> strategies = new List<ISudokuStrategy>()
             {
-
+                new SimpleMarkUpStrategy(_sudokuMapper),
+                new NakedPairStrategy(_sudokuMapper)
             };
 
             // has the state of the board 

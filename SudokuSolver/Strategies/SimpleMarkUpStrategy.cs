@@ -77,9 +77,9 @@ namespace SudokuSolver.Strategies
             var sudokuMap = _sudokuMapper.Find(givenRow, givenCol);
 
             // loops through all the blocks
-            for (int row = sudokuMap.StartRow; row < sudokuMap.StartRow + 2; row++)
+            for (int row = sudokuMap.StartRow; row <= sudokuMap.StartRow + 2; row++)
             {
-                for (int col = sudokuMap.StartCol; col < sudokuMap.StartCol + 2; col++)
+                for (int col = sudokuMap.StartCol; col <= sudokuMap.StartCol + 2; col++)
                 {
                     // checks to see if the number is correct
                     if (IsValidSingle(sudokuBoard[row, col]))

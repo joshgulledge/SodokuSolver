@@ -21,7 +21,7 @@ namespace SudokuSolver.Workers
                 //then print the each element in array followed by a |
                 for (int col = 0; col < sudokoBoard.GetLength(1); col++)
                 {
-                    Console.WriteLine("{0}{1}", sudokoBoard[row, col],"|");
+                    Console.Write("{0}{1}", sudokoBoard[row, col],"|");
                 }
                 //give another line
                 Console.WriteLine();
