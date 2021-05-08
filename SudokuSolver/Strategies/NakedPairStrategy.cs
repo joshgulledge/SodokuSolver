@@ -91,14 +91,24 @@ namespace SudokuSolver.Strategies
             {
                 for (int col = sudokuMap.StartCol; col < sudokuMap.StartCol + 2; col++)
                 {
-                   
+                   if (sudokuBoard[row, col].ToString().Length > 1 && sudokuBoard[row, col] != sudokuBoard[givenRow, givenCol])
+                    {
+                        EliminatePair(sudokuBoard, sudokuBoard[givenRow, givenCol], row, col);
+                    }
                 }
             }
         }
 
-        private bool HasPairInBlock(int[,] sudokuBoard, int givenRow, object givenCol)
+        private bool HasPairInBlock(int[,] sudokuBoard, int givenRow, int givenCol)
         {
-            
+            for (int row = 0; row < sudokuBoard.GetLength(0); row++)
+            {
+                for (int col = 0; col < sudokuBoard.GetLength(1); col++)
+                {
+                    var elementSame = givenRow == row && givenCol == col;
+                    var elementInSameBlock = _sudokuMapper.Find(givenRow, givenCol).StartRow()
+                }
+            }
         }
 
         private bool HasPairInRow(int[,] sudokuBoard, int givenRow, int givenCol)
